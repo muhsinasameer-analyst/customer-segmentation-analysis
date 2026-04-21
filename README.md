@@ -79,9 +79,7 @@ customer["Type"] = customer["Amount"].apply(classify)
 print(customer)
 
 ```
-Name:
-```text
-python_output.png
+Python_Output:
 ![Python Output](python_output.png)
 
 
