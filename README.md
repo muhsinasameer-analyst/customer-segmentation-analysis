@@ -83,4 +83,29 @@ Python_Output:
 ![Python Output](python_output.png)
 
 
+## 🧾 SQL Implementation
+
+Customer segmentation was performed using SQL by grouping customers based on total spending and classifying them using a CASE statement.
+
+---
+
+### 📌 SQL 
+
+```sql
+SELECT 
+    Customer_ID,
+    SUM(Amount) AS Total_Spent,
+    CASE
+        WHEN SUM(Amount) > 5000 THEN 'High'
+        WHEN SUM(Amount) > 2000 THEN 'Medium'
+        ELSE 'Low'
+    END AS Customer_Type
+FROM orders
+GROUP BY Customer_ID
+ORDER BY Total_Spent DESC;
+
+
+```
+SQL_Output:
+
 
