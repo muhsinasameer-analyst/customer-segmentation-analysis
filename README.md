@@ -78,5 +78,8 @@ customer["Type"] = customer["Amount"].apply(classify)
 # Display result
 print(customer)
 
+```
+![Python Output](python_impl.png)
+
 
 
