@@ -107,5 +107,6 @@ ORDER BY Total_Spent DESC;
 
 ```
 SQL_Output:
+![SQL Output](SQL_Output.png)
 
 
