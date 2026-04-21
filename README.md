@@ -46,4 +46,37 @@ To analyze customer purchase data and classify customers into different segments
 - SQL CASE Logic  
 - Python Data Analysis  
 - Customer Segmentation  
-- Business Insight Generation 
+- Business Insight Generation
+
+## 🐍 Python Implementation
+
+The customer segmentation was also performed using Python (Pandas) to group customers and classify them based on total spending.
+
+### 📌 Code
+
+```python
+import pandas as pd
+
+# Load data
+df = pd.read_csv("orders.csv")
+
+# Group customers
+customer = df.groupby("Customer_ID")["Amount"].sum().reset_index()
+
+# Classification function
+def classify(x):
+    if x > 5000:
+        return "High"
+    elif x > 2000:
+        return "Medium"
+    else:
+        return "Low"
+
+# Apply classification
+customer["Type"] = customer["Amount"].apply(classify)
+
+# Display result
+print(customer)
+
+
+
